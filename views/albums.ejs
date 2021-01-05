@@ -1,0 +1,20 @@
+<%- include('./partials/header')%>
+
+<h3>Albums</h3>
+<% albumsResults.forEach(albumItem=> { %>
+    <figure>
+        <% if(albumItem.images[0] == undefined){ %>
+            <img src="./img/no-picture-available.jpg" alt="">
+        <% } else { %>
+            <img src="<%= albumItem.images[0].url %>" alt="">
+        <% } %>
+
+        <figcaption>
+            <p><%= albumItem.name %></p>
+
+            <a href="/tracks/<%= albumItem.id %>">View Tracks</a>
+        </figcaption>
+    </figure>
+<% }) %>
+
+<%- include('./partials/footer')%>

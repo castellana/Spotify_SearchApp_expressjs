@@ -1,0 +1,21 @@
+<%- include('./partials/header')%>
+
+<% artistResults.forEach(item=> { %>
+    <figure>
+        <!-- <p>Artist images: <%# JSON.stringify(item.images) %></p> para ver lo que hay dentro-->
+
+        <% if(item.images[0] == undefined){ %>
+            <img src="./img/no-picture-available.jpg" alt="">
+        <% } else { %>
+            <img src="<%= item.images[0].url %>" alt="">
+        <% } %>
+
+        <figcaption>
+            <p><%= item.name %></p>
+
+            <a href="/albums/<%= item.id %>">View Albums</a>
+        </figcaption>
+    </figure>
+<% }) %>
+
+<%- include('./partials/footer')%>
