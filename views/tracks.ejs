@@ -4,12 +4,14 @@
 <section id="tracksSec">
     <%#JSON.stringify(tracksResults) %>
     <% tracksResults.forEach(trackItem=> { %>
+        <div class="trackItem">
         <% if(trackItem.preview_url[0] == undefined){ %>
             <img src="./img/no-picture-available.jpg" alt="">
         <% } else { %>
             <p><%= trackItem.name %></p>
             <audio src=<%= trackItem.preview_url %> controls ></audio>
         <% } %>
+        </div>
     <% }) %>
 </section>
 

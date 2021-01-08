@@ -113,3 +113,28 @@ figcaption a {
     color: #fff;
     font-size: 1.5rem;
 }
+
+#tracksSec {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 10vh;
+}
+
+.trackItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 0;
+    align-items: center;
+}
+
+.trackItem p {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+audio::-webkit-media-controls-enclosure {
+    background: grey;
+}
+

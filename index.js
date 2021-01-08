@@ -66,6 +66,7 @@ app.get('/tracks/:Id', (req, res) => {
   .then(function(data) {
     // console.log(data.body);
     // console.log('tracks string:', JSON.stringify(data.body.items));
+    console.log(data.body.items);
     const tracksResults = data.body.items
     res.render('tracks', {tracksResults})
   }, function(err) {
