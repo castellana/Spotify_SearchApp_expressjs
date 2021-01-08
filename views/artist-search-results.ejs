@@ -1,11 +1,13 @@
-<%- include('./partials/header')%>
+<%- include('./partials/head')%>
+<%- include('./partials/nav')%>
 
+<section id="artistsSec">
 <% artistResults.forEach(item=> { %>
-    <figure>
+    <figure class="artistItem">
         <!-- <p>Artist images: <%# JSON.stringify(item.images) %></p> para ver lo que hay dentro-->
 
         <% if(item.images[0] == undefined){ %>
-            <img src="./img/no-picture-available.jpg" alt="<%= item.name %>">
+            <img class="noFoto" src="./img/no-picture-available.jpg" alt="<%= item.name %>">
         <% } else { %>
             <img src="<%= item.images[0].url %>" alt="">
         <% } %>
@@ -19,6 +21,7 @@
     </figure>
     
 <% }) %>
-<a href="<%= artistNextPage %>">More</a>
+</section>
+<!-- <a href="<%# artistNextPage %>">More</a> -->
 
 <%- include('./partials/footer')%>

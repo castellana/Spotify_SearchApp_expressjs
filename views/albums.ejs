@@ -1,22 +1,28 @@
-<%- include('./partials/header')%>
+<%- include('./partials/head')%>
 
-<h3>Albums</h3>
-<% albumsResults.forEach(albumItem=> { %>
-    <figure>
-        <% if(albumItem.images[0] == undefined){ %>
-            <img src="./img/no-picture-available.jpg" alt="">
-        <% } else { %>
-            <img src="<%= albumItem.images[0].url %>" alt="">
-        <% } %>
+<%- include('./partials/nav')%>
 
-        <figcaption>
-            <p><%= albumItem.name %></p>
+<section class="albums">
+    <section id="albumsSec">
+        <% albumsResults.forEach(albumItem=> { %>
+            <figure class="artistItem">
+                <% if(albumItem.images[0] == undefined){ %>
+                    <img src="./img/no-picture-available.jpg" alt="">
+                <% } else { %>
+                    <img src="<%= albumItem.images[0].url %>" alt="">
+                <% } %>
 
-            <a href="/tracks/<%= albumItem.id %>">View Tracks</a>
-        </figcaption>
-    </figure>
-<% }) %>
+                <figcaption>
+                    <p><%= albumItem.name %></p>
 
-<a href="<%= site-2 %>">Show previews albums</a>
-<a href="<%= site %>">Show next albums</a>
+                    <a href="/tracks/<%= albumItem.id %>">View Tracks</a>
+                </figcaption>
+            </figure>
+        <% }) %>
+    </section>
+
+<a href="<%= site-2 %>"> &#8592; Show previews albums</a>
+<a href="<%= site %>">Show next albums &#8594;</a>
+</section>
+
 <%- include('./partials/footer')%>

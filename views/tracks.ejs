@@ -1,19 +1,16 @@
-<%- include('./partials/header')%>
+<%- include('./partials/head')%>
+<%- include('./partials/nav')%>
 
-<h3>Tracks</h3>
-<%#JSON.stringify(tracksResults) %>
-<% tracksResults.forEach(trackItem=> { %>
-
+<section id="tracksSec">
+    <%#JSON.stringify(tracksResults) %>
+    <% tracksResults.forEach(trackItem=> { %>
         <% if(trackItem.preview_url[0] == undefined){ %>
             <img src="./img/no-picture-available.jpg" alt="">
         <% } else { %>
             <p><%= trackItem.name %></p>
             <audio src=<%= trackItem.preview_url %> controls ></audio>
-            
         <% } %>
-        
-
-
-<% }) %>
+    <% }) %>
+</section>
 
 <%- include('./partials/footer')%>

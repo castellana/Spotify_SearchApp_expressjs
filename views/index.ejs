@@ -1,10 +1,15 @@
-<%- include('./partials/header')%>
+<%- include('./partials/head')%>
+<%- include('./partials/nav')%>
+<section id="main-hero">
 
-<h1>Search for artist</h1>
-<form action="/artist-search" method="get" enctype="multipart/form-data">
-    <input type="search" name="artistInput" id="artist-input" placeholder="Write here the name of the artist you want to hear">
-    <!-- o también podemos usar input type=text -->
-    <input type="submit" value="Send">
-</form>
+    <article class="searchForm">
+        <h1>Search for your favorite artist</h1>
+        <form  action="/artist-search" method="get" enctype="multipart/form-data">
+            <input type="search" name="artistInput" id="artist-input" placeholder="Name of the artist">
+            <!-- o también podemos usar input type=text -->
+            <input type="submit" value="Find">
+        </form>
+    </article>
 
+</section>
 <%- include('./partials/footer')%>

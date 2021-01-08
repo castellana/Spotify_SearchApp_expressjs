@@ -1,6 +1,115 @@
-/* * {
-    background: red;
-} */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
 body {
     background: #333333;
+    font-family: 'Lato', sans-serif; 
+}
+#main-hero {
+    background: url('/img/spotify-background\ 1.png') center / cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.787);
+    height: 8vh;
+    display: flex;
+    align-items: center;
+}
+nav ul {
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav ul li {
+    width: 100px;
+}
+
+nav a {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+nav a:hover {
+    color:rgba(226, 235, 109, 0.787)
+}
+
+.searchForm {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchForm h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+form {
+    width: inherit;
+    display: flex;
+}
+
+input[type=search] {
+    width: 80%;
+    font-size: 1.2rem;
+    padding: 2vh 3%;
+}
+
+input::placeholder {
+    font-size: 1.2rem;
+}
+
+input[type=submit]{
+    width: 20%;
+    font-size: 1.2rem;
+}
+
+#artistsSec, #albumsSec  {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* column-gap: 5%; */
+    row-gap: 3vh;
+    padding: 5vh 0 5vh;
+}
+
+.artistItem {
+    width: 80%;
+}
+
+.artistItem img {
+    width: 100%;
+}
+
+figcaption {
+    text-align: center;
+    background-color: rgb(158, 144, 144);
+    height: 120px;
+
+}
+figcaption p {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 2vh 0;
+}
+
+figcaption a {
+    color: #fff;
+    background-color: #ff6666;
+    padding: 1vh 3%;
+    border-radius: 10px;
+    margin: 2vh 0;
+}
+
+.albums>a {
+    color: #fff;
+    font-size: 1.5rem;
 }
