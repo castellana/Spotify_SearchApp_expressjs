@@ -3,7 +3,7 @@
 require('dotenv').config()
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 const SpotifyWebApi = require('spotify-web-api-node');
 
 app.use(express.static('public'))

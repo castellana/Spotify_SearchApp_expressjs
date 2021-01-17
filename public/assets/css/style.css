@@ -138,3 +138,26 @@ audio::-webkit-media-controls-enclosure {
     background: grey;
 }
 
+@media only screen and (max-width: 575.98px) {
+    .searchForm {
+        width: 90%
+    }
+    .searchForm h1 {
+        font-size: 1.5rem;
+    }
+    #artistsSec, #albumsSec  {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3%;
+    }
+    .artistItem {
+        width: 100%;
+    }
+    figcaption p {
+        font-size: 1rem;
+    }
+    figcaption a {
+        font-size: .8rem;
+    }
+
+}
+
