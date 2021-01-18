@@ -158,6 +158,29 @@ audio::-webkit-media-controls-enclosure {
     figcaption a {
         font-size: .8rem;
     }
+    #tracksSec {
+        width: 90%;
+    }
+    .trackItem {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 4vh;
+    }
+    .trackItem p {
+        font-size: 1rem;
+    }
+    audio {
+        width: 200px;
+        height: 40px;
+    }
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display, audio::-webkit-media-controls, 
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-mute-button,
+    audio::-webkit-media-controls-toggle-closed-captions-button
+    {
+        font-size: .7rem;
+    }
 
 }
 
