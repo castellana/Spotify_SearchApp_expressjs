@@ -7,7 +7,7 @@
         <% albumsResults.forEach(albumItem=> { %>
             <figure class="artistItem">
                 <% if(albumItem.images[0] == undefined){ %>
-                    <img src="./img/no-picture-available.jpg" alt="">
+                    <img src="./img/photo-not-available.png" alt="">
                 <% } else { %>
                     <img src="<%= albumItem.images[0].url %>" alt="">
                 <% } %>

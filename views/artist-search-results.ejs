@@ -7,7 +7,7 @@
         <!-- <p>Artist images: <%# JSON.stringify(item.images) %></p> para ver lo que hay dentro-->
 
         <% if(item.images[0] == undefined){ %>
-            <img class="noFoto" src="./img/no-picture-available.jpg" alt="<%= item.name %>">
+            <img class="noFoto" src="./img/photo-not-available.png" alt="<%= item.name %>">
         <% } else { %>
             <img src="<%= item.images[0].url %>" alt="">
         <% } %>

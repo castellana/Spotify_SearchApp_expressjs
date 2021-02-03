@@ -87,6 +87,8 @@ input[type=submit]{
 
 .artistItem img {
     width: 100%;
+    object-fit: cover;
+    height: 330px;
 }
 
 figcaption {
@@ -151,6 +153,11 @@ audio::-webkit-media-controls-enclosure {
     }
     .artistItem {
         width: 100%;
+    }
+
+    .artistItem img {
+        height: 150px;
+        object-fit: cover;
     }
     figcaption p {
         font-size: 1rem;
